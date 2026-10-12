@@ -239,3 +239,27 @@ ls -la _site
 
 ![](/img/site.png)
 
+## Preparar la carpeta del blog para NGINX
+
+Voy a copiar la web generada a /var/www/blog, que será la ubicación desde la que NGINX servirá el blog.
+
+Para ello, ejecuté:
+
+```bash
+sudo mkdir -p /var/www/blog
+```
+Después, copio todo el contenido de `_site` a `/var/www/blog`, conservando la estructura de archivos y carpetas. Uso `sudo` porque `/var/www` pertenece al sistema:
+```bash
+sudo cp -a _site/. /var/www/blog/
+```
+
+Por último, este último comando solo muestra los archivos copiados para verificar que están en su sitio:
+
+```bash
+ls -la /var/www/blog
+```
+![](/img/verificacion-copia.png)
+
+
+
+
