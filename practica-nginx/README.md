@@ -224,3 +224,18 @@ Terminó con:
 
 ![](/img/generacion-blog2.png)
 
+## Comprobar que se ha generado el blog
+
+Ejecuto:
+
+```bash
+ls -la _site
+```
+
+¿Qué hace y por qué?
++ `ls -la` muestra los archivos y carpetas, incluidos los ocultos.
++ `_site` es la carpeta donde Jekyll genera la web estática que después servirá NGINX.
++ Hay que comprobar que existe index.html y que se han generado los recursos del blog.
+
+![](/img/site.png)
+
