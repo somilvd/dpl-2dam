@@ -297,6 +297,32 @@ sudo nginx -t
 
 ![](/img/blog-test.png)
 
+## Recargar NGINX
+
+Ejecuté:
+
+```bash
+sudo systemctl reload nginx
+```
+
+¿Qué hace y por qué?
+- `systemctl reload nginx` pide a NGINX que vuelva a leer su configuración sin detener completamente el servicio.
+- Así se activa la configuración de blog.test y la documentación de Zensical debería seguir funcionando.
+
+Después, comprobé que NGINX responde al blog con este comando:
+
+```bash
+curl -I -H "Host: blog.test" http://127.0.0.1
+```
+
+¿Qué hace?
+- `curl` realiza una petición HTTP.
+- `-I` solicita solo las cabeceras de respuesta.
+- `-H "Host: blog.test"` simula una petición dirigida al dominio blog.test.
+- `http://127.0.0.1` apunta a mi propia máquina Debian.
+
+![](/img/comprobacion-nginx-blog.png)
+
 
 
 
