@@ -1,8 +1,10 @@
 # NGINX para todos y todos para NGINX
 
-## Somil Vasandani 2º DAM
+### Somil Vasandani 2º DAM<hr>
 
-# Instalación NGINX
+# Fase 1. Despliegue de la documentación con Zensical
+
+## Instalación NGINX
 
 Instalo los requisitos previos mediante:
 
@@ -54,7 +56,7 @@ sudo apt install nginx
 ```
 ![](/img/instalacion.png)
 
-# Clonar el repositorio
+## Clonar el repositorio
 
 Comprobé que tenía zensical instalado:
 
@@ -80,7 +82,7 @@ Compruebo que nginx está activo:
 
 ![](/img/estado-nginx.png)
 
-### Copiar la documentación generada
+## Copiar la documentación generada
 
 Cree una carpeta para los archivos que NGINX va a servir y copié en ella el contenido generado por Zensical:
 
@@ -89,7 +91,7 @@ sudo mkdir -p /var/www/gitanddocs
 sudo cp -r ~/gitanddocs/site/* /var/www/gitanddocs/
 ```
 
-### Configurar NGINX
+## Configurar NGINX
 
 Abrí el archivo de configuración de NGINX:
 
@@ -129,3 +131,9 @@ Reinicio NGINX, para que la configuración se guarde correctamente mediante:
 ```bash
 sudo systemctl reload nginx
 ```
+
+## Comprobar el funcionamiento
+
+Abrí el navegador y puse `http://localhost` y apareció la documentación de `gitanddocs`:
+
+![](/img/comprobacion-localhost.png)
