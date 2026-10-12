@@ -53,3 +53,29 @@ sudo apt update
 sudo apt install nginx
 ```
 ![](/img/instalacion.png)
+
+# Clonar el repositorio
+
+Comprobé que tenía zensical instalado:
+
+```bash
+alumno@debian-des:~$ zensical --version
+0.0.69
+```
+Luego, activé el entorno virtual (venv) para trabajar con zensical mediante:
+
+```bash
+source ~/herramientas/zensical/venv/bin/activate
+```
+
+Despues de instalar NGINX, cloné el repositorio `gitanddocs`:
+
+![](/img/clonar-repo.png)
+
+Hago, un `ls`, después, `zensical build` y otra vez `ls` y veo que apareció la carpeta site:
+
+![](/img/zensical-build.png)
+
+Compruebo que nginx está activo:
+
+![](/img/estado-nginx.png)
