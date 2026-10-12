@@ -137,3 +137,42 @@ sudo systemctl reload nginx
 Abrí el navegador y puse `http://localhost` y apareció la documentación de `gitanddocs`:
 
 ![](/img/comprobacion-localhost.png)
+
+# Fase 2. Despliegue de un blog personal con Jekyll
+
+## Instalación del entorno Ruby
+
+Ruby, básicamente, es el entorno que necesita Jekyll para funcionar. Así que, voy a instalar Ruby y las herramientas necesarias para Jekyll.
+
+Esto instalará Ruby y las herramientas necesarias para poder instalar las dependencias de Jekyll:
+
+```bash
+sudo apt install -y ruby-full build-essential
+```
+![](/img/instalacion-ruby.png)
+
+Compruebo que se instaló correctamente: 
+
+![](/img/ruby-version.png)
+
+## Instalación Jekyll y Bundler
+
+Bundler es una herramienta que permite gestionar las dependencias Ruby que necesita un proyecto.
+
+Ejecuté el siguiente comando para llevar a cabo la instalacion:
+
+```bash
+sudo gem install jekyll bundler
+```
+![](/img/instalacion-jekyll-bundler.png)
+
+Compruebo que se instalaron correctamente mediante:
+
+```bash
+jekyll --version
+```
+y
+```bash
+bundle --version
+```
+![](/img/comprobacion-instalacion.png)
