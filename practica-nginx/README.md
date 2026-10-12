@@ -88,3 +88,44 @@ Cree una carpeta para los archivos que NGINX va a servir y copié en ella el con
 sudo mkdir -p /var/www/gitanddocs
 sudo cp -r ~/gitanddocs/site/* /var/www/gitanddocs/
 ```
+
+### Configurar NGINX
+
+Abrí el archivo de configuración de NGINX:
+
+```bash
+sudo nano /etc/nginx/conf.d/default.conf
+```
+
+Busqué la línea:
+
+```nginx
+root /usr/share/nginx/html;
+```
+
+Y la cambié por:
+
+```nginx
+root /var/www/gitanddocs;
+```
+
+![](/img/cambio-conf.png)
+
+Así, NGINX servirá la documentación generada por Zensical desde la carpeta `/var/www/gitanddocs`.
+
+Guardé los cambios con `Ctrl + O`, pulsé `Enter` y salí con `Ctrl + X`.
+
+Comprobé que la configuración sea correcta mediante:
+
+```bash
+sudo nginx -t
+```
+Y me apareció:
+
+![](/img/nginx-test.png)
+
+Reinicio NGINX, para que la configuración se guarde correctamente mediante:
+
+```bash
+sudo systemctl reload nginx
+```
