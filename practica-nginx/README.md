@@ -282,6 +282,20 @@ Qué significa cada parte:
 - index index.html; establece la página inicial.
 - try_files ... intenta encontrar el archivo solicitado y devuelve un error 404 si no existe.
 
+## Comprobar la configuración
+
+Ejecuté:
+
+```bash
+sudo nginx -t
+```
+
+¿Qué hace y por qué?
+- `sudo` ejecuta la comprobación con permisos de administrador.
+- `nginx -t` revisa los archivos de configuración de NGINX para detectar errores de sintaxis.
+- Lo hacemos antes de recargar el servicio para evitar problemas con la web de Zensical.
+
+![](/img/blog-test.png)
 
 
 
