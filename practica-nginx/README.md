@@ -79,3 +79,12 @@ Hago, un `ls`, después, `zensical build` y otra vez `ls` y veo que apareció la
 Compruebo que nginx está activo:
 
 ![](/img/estado-nginx.png)
+
+### Copiar la documentación generada
+
+Cree una carpeta para los archivos que NGINX va a servir y copié en ella el contenido generado por Zensical:
+
+```bash
+sudo mkdir -p /var/www/gitanddocs
+sudo cp -r ~/gitanddocs/site/* /var/www/gitanddocs/
+```
