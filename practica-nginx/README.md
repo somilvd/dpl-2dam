@@ -176,3 +176,33 @@ y
 bundle --version
 ```
 ![](/img/comprobacion-instalacion.png)
+
+## Crear el blog personal
+
+Voy a crear un blog con una temática de tecnología y programación. Tendrá una página de inicio y artículos que podré ampliar después.
+Primero, voy a salir de la carpeta `gitanddocs` y volver al directorio personal.
+
+Ejecuté:
+```bash
+cd ~
+```
+
+¿Por qué lo hago? Para crear el blog en una carpeta independiente de la documentación de Zensical. Así se mantienen separados los dos proyectos y de esta forma evito mezclar sus archivos.
+
+Después de eso, ejecuté:
+
+```bash
+jekyll new blog-personal
+```
+Jekyll generará una estructura inicial con archivos de configuración, páginas, artículos de ejemplo, estilos y dependencias.
+
+![](/img/creacion-blog.png)
+
+Entro al proyecto mediante `cd /blog-personal`.
+
+Luego, instalo las dependecias necesarias mediante:
+
+```bash
+bundle install
+```
+![](/img/dependecias-necesarias.png)
