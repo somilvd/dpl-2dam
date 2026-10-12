@@ -206,3 +206,21 @@ Luego, instalo las dependecias necesarias mediante:
 bundle install
 ```
 ![](/img/dependecias-necesarias.png)
+
+## Generar el blog
+
+Ahora voy a comprobar que Jekyll puede construir el sitio web.
+
+```bash
+bundle exec jekyll build
+```
+
++ `bundle exec`: ejecuta el programa utilizando las dependencias configuradas para este proyecto.
++ `jekyll build`: genera la versión estática del blog, convirtiendo sus archivos y plantillas en HTML, CSS y otros recursos listos para publicar.
+
+![](/img/generacion-blog.png)
+
+Terminó con:
+
+![](/img/generacion-blog2.png)
+
