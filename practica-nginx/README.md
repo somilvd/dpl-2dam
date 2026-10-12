@@ -260,6 +260,30 @@ ls -la /var/www/blog
 ```
 ![](/img/verificacion-copia.png)
 
+## Configurar NGINX para el blog
+
+Voy a crear un segundo archivo de configuración para que NGINX sirva el blog con una URL diferente. La idea es mantener:
+- http://localhost → documentación de Zensical.
+- http://blog.test → blog personal de Jekyll.
+
+Primero, abro el editor nano con un archivo nuevo de configuración para el blog. sudo permite guardarlo en la carpeta del sistema:
+```bash
+sudo nano /etc/nginx/conf.d/blog.conf
+```
+
+Una vez dentro del editor, puse:
+
+![](/img/configuracion.png)
+
+Qué significa cada parte:
+- listen 80; hace que NGINX atienda las peticiones HTTP en el puerto 80.
+- server_name blog.test; identifica este sitio por su nombre.
+- root /var/www/blog; indica dónde están los archivos del blog.
+- index index.html; establece la página inicial.
+- try_files ... intenta encontrar el archivo solicitado y devuelve un error 404 si no existe.
+
+
+
 
 
 
