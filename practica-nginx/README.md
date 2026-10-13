@@ -402,4 +402,16 @@ nano _posts/2026-10-13-programacion-orientada-a-objetos.md
 
 ![](/img/primera-publicaion.png)
 
+## Reconstruir el blog
+Ejecuté:
+```bash
+bundle exec jekyll build
+```
+
+¿Qué hace y por qué?
+- `bundle exec` ejecuta Jekyll con las dependencias instaladas para este proyecto.
+- `jekyll build` genera de nuevo la web estática dentro de _site, incorporando los cambios que acabo de hacer.
+
+![](/img/reconstruccion.png)
+
 
