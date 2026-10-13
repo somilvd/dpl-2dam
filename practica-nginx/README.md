@@ -342,3 +342,15 @@ curl -I http://blog.test
 Qué hace: comprueba que blog.test ya se resuelve correctamente y que NGINX devuelve el blog. Esperamos ver HTTP/1.1 200 OK.
 
 ![](/img/dominio-blog.png)
+
+## Comprobar Zensical
+Ejecuté:
+```bash
+curl -I http://localhost
+```
+
+Qué hace: realiza una petición a `http://localhost`, que es la dirección que ya tenía configurada para la documentación de Zensical.
+
+Quiero comprobar que sigue devolviendo: `HTTP/1.1 200 OK`:
+
+![](/img/comprobacion-zensical.png)
