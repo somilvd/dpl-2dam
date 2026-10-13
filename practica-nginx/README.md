@@ -388,4 +388,18 @@ Con este comando, estoy abriendo el archivo Markdown que Jekyll utiliza como pá
 
 ![](/img/pagina-principal-blog.png)
 
+## Crear la primera publicación
+
+Ejecuté este comando:
+```bash
+nano _posts/2026-10-13-programacion-orientada-a-objetos.md
+```
+
+¿Qué hace?
++ nano abre un editor de texto.
++ _posts/ es la carpeta donde Jekyll busca las publicaciones.
++ 2026-10-13-...md sigue el formato de nombre que Jekyll utiliza para reconocer una entrada: fecha, título y archivo Markdown.
+
+![](/img/primera-publicaion.png)
+
 
