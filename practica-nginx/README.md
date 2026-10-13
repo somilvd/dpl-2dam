@@ -378,3 +378,14 @@ Lo hago para sustituir el título y los textos de ejemplo de Jekyll. Y pongo:
 + url: dirección que hemos configurado en NGINX.
 
 + email y las redes sociales: quitamos los datos ficticios de ejemplo. El correo es provisional; no representa una dirección real.
+
+## Crear una página principal con contenido
+Abrí el archivo:
+```bash
+nano index.markdown
+```
+Con este comando, estoy abriendo el archivo Markdown que Jekyll utiliza como página principal. Vamos a sustituir su contenido por una presentación del blog:
+
+![](/img/pagina-principal-blog.png)
+
+
