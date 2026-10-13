@@ -323,7 +323,22 @@ curl -I -H "Host: blog.test" http://127.0.0.1
 
 ![](/img/comprobacion-nginx-blog.png)
 
+## Hacer que `blog.test` sea reconocible
 
+Voy a añadir el dominio local al archivo hosts de Debian.
+Para ello, ejecuté:
+```bash
+sudo nano /etc/hosts
+```
 
+Qué hace: abre el archivo que relaciona nombres de dominio con direcciones IP en tu máquina. Así, Debian podrá resolver `blog.test` hacia su propia dirección local.
 
+Al final del archivo, añadí esta línea: `127.0.0.1 blog.test`
 
+Y después ejecuté:
+```bash
+curl -I http://blog.test
+```
+Qué hace: comprueba que blog.test ya se resuelve correctamente y que NGINX devuelve el blog. Esperamos ver HTTP/1.1 200 OK.
+
+![](/img/dominio-blog.png)
