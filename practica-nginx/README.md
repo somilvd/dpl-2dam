@@ -414,4 +414,23 @@ bundle exec jekyll build
 
 ![](/img/reconstruccion.png)
 
+## Actualizar el blog que sirve NGINX
+
+Ahora tengo que copiar la nueva versión generada a la carpeta pública. Si no hago esto, NGINX seguirá mostrando la versión anterior.
+Ejecuté:
+```bash
+sudo cp -a _site/. /var/www/blog/
+```
+
+Qué hace y por qué:
++ `sudo` permite escribir en la carpeta del servidor.
++ `cp -a` copia los archivos y conserva sus atributos.
++ `_site/.` indica que copie todo el contenido generado por Jekyll.
++ `/var/www/blog/` es la carpeta desde la que NGINX publica el blog.
+
+Este comando no modifica Zensical.
+Después de eso, abrí el navegador dentro de Debian (mi máquina virtual) y entré en: `http://blog.test`
+
+![](/img/resultado-blog-jekyll.png)
+
 
