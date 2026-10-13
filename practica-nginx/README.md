@@ -354,3 +354,27 @@ Qué hace: realiza una petición a `http://localhost`, que es la dirección que 
 Quiero comprobar que sigue devolviendo: `HTTP/1.1 200 OK`:
 
 ![](/img/comprobacion-zensical.png)
+
+## Realización del blog
+
+Una vez comprobado que todo funciona, empiezo a llevar a cabo el blog.
+
+### Cambiar los datos del blog
+
+Abrí el archivo de configuracuón:
+
+```bash
+nano _config.yml
+```
+
+Lo hago para sustituir el título y los textos de ejemplo de Jekyll. Y pongo:
+
+![](/img/configuracion-blog.png)
+
++ title: nombre que aparecerá en la cabecera del blog.
+
++ description: descripción de la temática.
+
++ url: dirección que hemos configurado en NGINX.
+
++ email y las redes sociales: quitamos los datos ficticios de ejemplo. El correo es provisional; no representa una dirección real.
