@@ -69,3 +69,26 @@ Abrí una nueva terminal y probé:
 ssh -i ~/.ssh/id_ed25519 alumno@127.0.0.1
 ```
 ![](/img/probar-nueva-conexion.png)
+
+# Solución de problemas
+
++ Revisé los logs del servidor:
+```bash
+sudo journalctl -u ssh -e
+```
+![](/img/revisar-logs.png)
+
+El sistema está funcionando exactamente como se espera en un entorno seguro.
+
++ Verifiqué los permisos en el servidor remoto:
+
+```bash
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+```
+
++ Comprobé que la clave pública correcta esté en `~/.ssh/authorized_keys`:
+
+```bash
+ssh-ed25519 AAAAC3NzaC1lZDI1YAE5AAAAIFZCl925qrdrpIKNnQhP+UKwn+fPxhCApuLyU4X3x7pD somildam7@gmail.com
+```
