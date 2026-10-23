@@ -7,3 +7,13 @@
 Compruebo si ya tengo una clave SSH: 
 
 ![](/img/comprobar-ssh.png)
+
+# 2. Copiar la clave pública al servidor remoto
+
+Usé `ssh-copy-id`:
+
+```bash
+ssh-copy-id -i ~/.ssh/id_ed25519.pub alumno@127.0.0.1
+```
+
+![](/img/copiar-ssh.png)
