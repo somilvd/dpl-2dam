@@ -17,3 +17,12 @@ ssh-copy-id -i ~/.ssh/id_ed25519.pub alumno@127.0.0.1
 ```
 
 ![](/img/copiar-ssh.png)
+
+# 3. Probar la autenticación con clave
+
+Verifico que puedo iniciar sesión sin contraseña:
+
+```bash
+ssh -i ~/.ssh/id_ed25519 alumno@127.0.0.1
+```
+![](/img/probar-autenticacion.png)
