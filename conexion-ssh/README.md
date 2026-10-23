@@ -26,3 +26,15 @@ Verifico que puedo iniciar sesión sin contraseña:
 ssh -i ~/.ssh/id_ed25519 alumno@127.0.0.1
 ```
 ![](/img/probar-autenticacion.png)
+
+# 4. Deshabilitar el inicio de sesión por contraseña en el servidor remoto
+
+Edita la configuración de SSH en el servidor remoto:
+
+```bash
+sudo nano /etc/ssh/sshd_config
+```
+
+Y añadí las siguientes directivas:
+
+![](/img/directivas.png)
