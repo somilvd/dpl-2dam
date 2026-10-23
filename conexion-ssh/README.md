@@ -38,3 +38,25 @@ sudo nano /etc/ssh/sshd_config
 Y añadí las siguientes directivas:
 
 ![](/img/directivas.png)
+
+# 5. Validar y aplicar la configuración
+
+Antes de recargar, compruebé que no haya errores de sintaxis, mediante:
+
+```bash
+sudo sshd -t
+```
+Después de ejecutar el anterior comando no me salió nada, así que todo ha ido bien.
+
+Recargué el servicio SSH:
+
+```bash
+sudo systemctl reload ssh
+```
+Una vez reiniciado el servicio, verifica la configuración efectiva:
+
+```bash
+sudo sshd -T | grep -E 'passwordauthentication|pubkeyauthentication|kbdinteractiveauthentication|challengeresponseauthentication|permitemptypasswords'
+```
+
+![](/img/verificar-configuracion.png)
