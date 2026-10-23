@@ -60,3 +60,12 @@ sudo sshd -T | grep -E 'passwordauthentication|pubkeyauthentication|kbdinteracti
 ```
 
 ![](/img/verificar-configuracion.png)
+
+# 6. Probar la nueva conexión
+
+Abrí una nueva terminal y probé:
+
+```bash
+ssh -i ~/.ssh/id_ed25519 alumno@127.0.0.1
+```
+![](/img/probar-nueva-conexion.png)
